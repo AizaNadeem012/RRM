@@ -114,7 +114,7 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 flex-shrink-0 text-primary" />
                 <a href="mailto:info@rrmcleaning.co.uk" className="hover:text-white transition-colors">
-                  info@rrmcleaning.co.uk
+                  rrmexternalcleaning@gmail.com
                 </a>
               </li>
               <li className="pt-2">
