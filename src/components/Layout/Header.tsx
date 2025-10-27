@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -17,6 +17,9 @@ const Header = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+
+  // Google Reviews URL (Replace with your actual link)
+  const googleReviewsUrl = "https://www.google.com/maps/search/?api=1&query=R+R+M+External+Cleaning+Specialist+Newton-le-Willows+Merseyside+UK ";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
@@ -51,6 +54,53 @@ const Header = () => {
           </nav>
 
           <div className="hidden lg:flex items-center space-x-4">
+            
+            {/* GOOGLE REVIEW BADGE - New Design with simulated Google Logo and 5 Stars */}
+            <a 
+              href={googleReviewsUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex flex-col items-start bg-white p-2 rounded-lg border border-gray-300 transition-shadow hover:shadow-md cursor-pointer"
+              aria-label="Read our 5 Star Google Reviews"
+            >
+                {/* Simulated Google Logo and Rating Text */}
+                <div className="flex items-center space-x-1 mb-0.5">
+                    {/* Simplified Google Logo Text (G O O G L E) */}
+                    <span className="font-sans text-xs font-bold" style={{ 
+                        color: '#4285F4' // Blue
+                    }}>G</span>
+                    <span className="font-sans text-xs font-bold" style={{ 
+                        color: '#EA4335' // Red
+                    }}>o</span>
+                    <span className="font-sans text-xs font-bold" style={{ 
+                        color: '#FBBC05' // Yellow
+                    }}>o</span>
+                    <span className="font-sans text-xs font-bold" style={{ 
+                        color: '#4285F4' // Blue
+                    }}>g</span>
+                    <span className="font-sans text-xs font-bold" style={{ 
+                        color: '#34A853' // Green
+                    }}>l</span>
+                    <span className="font-sans text-xs font-bold" style={{ 
+                        color: '#EA4335' // Red
+                    }}>e</span>
+
+                    {/* Rating Text */}
+                    <span className="text-xs font-semibold text-gray-800 ml-1">Rating</span>
+                </div>
+
+                {/* 5 Stars */}
+                <div className="flex items-center">
+                    <span className="text-sm font-bold text-gray-900 mr-1">5.0</span>
+                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                </div>
+            </a>
+            {/* GOOGLE REVIEW BADGE End */}
+
             <a href="tel:07845463877" className="flex items-center space-x-2 text-primary font-semibold hover:text-primary-light transition-colors">
               <Phone className="h-5 w-5" />
               <span>07845 463877</span>
