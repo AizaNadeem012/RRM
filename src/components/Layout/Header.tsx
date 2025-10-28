@@ -18,7 +18,7 @@ const Header = () => {
 
   const isActive = (path) => location.pathname === path;
 
-  // Google Reviews URL (Replace with your actual link)
+  // Google Reviews URL
   const googleReviewsUrl =
     "https://www.google.com/maps/search/?api=1&query=R+R+M+External+Cleaning+Specialist+Newton-le-Willows+Merseyside+UK";
 
@@ -26,18 +26,57 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* LOGO */}
-          <Link to="/" className="flex items-center space-x-4">
-            <img
-              src="/logo.webp"
-              alt="R.R.M External Cleaning Specialist"
-              className="h-16 w-auto md:h-20 lg:h-24 transition-transform hover:scale-105"
-            />
-            <div className="hidden md:block">
-              <div className="text-sm font-semibold text-primary">External Cleaning</div>
-              <div className="text-xs text-gray-600">Specialist</div>
-            </div>
-          </Link>
+          {/* LOGO + MOBILE GOOGLE REVIEW */}
+          <div className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-2">
+              <img
+                src="/logo.webp"
+                alt="R.R.M External Cleaning Specialist"
+                className="h-14 w-auto md:h-16 lg:h-20 transition-transform hover:scale-105"
+              />
+              <div className="hidden md:block">
+                <div className="text-sm font-semibold text-primary">External Cleaning</div>
+                <div className="text-xs text-gray-600">Specialist</div>
+              </div>
+            </Link>
+
+            {/* GOOGLE REVIEW BADGE ON MOBILE */}
+            <a
+              href={googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center bg-white p-1.5 rounded-md border border-gray-300 hover:shadow-md transition-all lg:hidden"
+              style={{ minWidth: "60px" }}
+              aria-label="Read our 5 Star Google Reviews"
+            >
+              <div className="flex items-center space-x-0.5">
+                <span className="font-sans text-[10px] font-bold" style={{ color: "#4285F4" }}>
+                  G
+                </span>
+                <span className="font-sans text-[10px] font-bold" style={{ color: "#EA4335" }}>
+                  o
+                </span>
+                <span className="font-sans text-[10px] font-bold" style={{ color: "#FBBC05" }}>
+                  o
+                </span>
+                <span className="font-sans text-[10px] font-bold" style={{ color: "#4285F4" }}>
+                  g
+                </span>
+                <span className="font-sans text-[10px] font-bold" style={{ color: "#34A853" }}>
+                  l
+                </span>
+                <span className="font-sans text-[10px] font-bold" style={{ color: "#EA4335" }}>
+                  e
+                </span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-[10px] font-bold text-gray-900 mr-0.5">5.0</span>
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-3 w-3 fill-yellow-500 text-yellow-500" />
+                ))}
+              </div>
+            </a>
+          </div>
 
           {/* NAVIGATION - Desktop */}
           <nav className="hidden lg:flex items-center space-x-1">
@@ -56,7 +95,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* RIGHT SECTION - PHONE + BUTTON + GOOGLE REVIEW */}
+          {/* RIGHT SECTION - PHONE + BUTTON + GOOGLE REVIEW (Desktop) */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* GOOGLE REVIEW BADGE */}
             <a
@@ -135,42 +174,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-
-              {/* MOBILE GOOGLE REVIEW BADGE */}
-              <a
-                href={googleReviewsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center bg-white p-2 rounded-lg border border-gray-300 hover:shadow-md transition-shadow"
-              >
-                <div className="flex items-center mb-1">
-                  <span className="font-sans text-xs font-bold" style={{ color: "#4285F4" }}>
-                    G
-                  </span>
-                  <span className="font-sans text-xs font-bold" style={{ color: "#EA4335" }}>
-                    o
-                  </span>
-                  <span className="font-sans text-xs font-bold" style={{ color: "#FBBC05" }}>
-                    o
-                  </span>
-                  <span className="font-sans text-xs font-bold" style={{ color: "#4285F4" }}>
-                    g
-                  </span>
-                  <span className="font-sans text-xs font-bold" style={{ color: "#34A853" }}>
-                    l
-                  </span>
-                  <span className="font-sans text-xs font-bold" style={{ color: "#EA4335" }}>
-                    e
-                  </span>
-                  <span className="text-xs font-semibold text-gray-800 ml-1">Rating</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-sm font-bold text-gray-900 mr-1">5.0</span>
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                  ))}
-                </div>
-              </a>
 
               <a
                 href="tel:07845463877"
