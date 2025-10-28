@@ -16,20 +16,22 @@ const Header = () => {
     { name: "Contact", href: "/contact" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path) => location.pathname === path;
 
   // Google Reviews URL (Replace with your actual link)
-  const googleReviewsUrl = "https://www.google.com/maps/search/?api=1&query=R+R+M+External+Cleaning+Specialist+Newton-le-Willows+Merseyside+UK ";
+  const googleReviewsUrl =
+    "https://www.google.com/maps/search/?api=1&query=R+R+M+External+Cleaning+Specialist+Newton-le-Willows+Merseyside+UK";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+          {/* LOGO */}
           <Link to="/" className="flex items-center space-x-4">
-            <img 
-              src="/logo.webp" 
-              alt="R.R.M External Cleaning Specialist" 
-              className="h-16 w-auto md:h-20 lg:h-24 transition-transform hover:scale-105" // Increased logo size
+            <img
+              src="/logo.webp"
+              alt="R.R.M External Cleaning Specialist"
+              className="h-16 w-auto md:h-20 lg:h-24 transition-transform hover:scale-105"
             />
             <div className="hidden md:block">
               <div className="text-sm font-semibold text-primary">External Cleaning</div>
@@ -37,6 +39,7 @@ const Header = () => {
             </div>
           </Link>
 
+          {/* NAVIGATION - Desktop */}
           <nav className="hidden lg:flex items-center space-x-1">
             {navigation.map((item) => (
               <Link
@@ -53,55 +56,49 @@ const Header = () => {
             ))}
           </nav>
 
+          {/* RIGHT SECTION - PHONE + BUTTON + GOOGLE REVIEW */}
           <div className="hidden lg:flex items-center space-x-4">
-            
-            {/* GOOGLE REVIEW BADGE - New Design with simulated Google Logo and 5 Stars */}
-            <a 
-              href={googleReviewsUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            {/* GOOGLE REVIEW BADGE */}
+            <a
+              href={googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col items-start bg-white p-2 rounded-lg border border-gray-300 transition-shadow hover:shadow-md cursor-pointer"
               aria-label="Read our 5 Star Google Reviews"
             >
-                {/* Simulated Google Logo and Rating Text */}
-                <div className="flex items-center space-x-1 mb-0.5">
-                    {/* Simplified Google Logo Text (G O O G L E) */}
-                    <span className="font-sans text-xs font-bold" style={{ 
-                        color: '#4285F4' // Blue
-                    }}>G</span>
-                    <span className="font-sans text-xs font-bold" style={{ 
-                        color: '#EA4335' // Red
-                    }}>o</span>
-                    <span className="font-sans text-xs font-bold" style={{ 
-                        color: '#FBBC05' // Yellow
-                    }}>o</span>
-                    <span className="font-sans text-xs font-bold" style={{ 
-                        color: '#4285F4' // Blue
-                    }}>g</span>
-                    <span className="font-sans text-xs font-bold" style={{ 
-                        color: '#34A853' // Green
-                    }}>l</span>
-                    <span className="font-sans text-xs font-bold" style={{ 
-                        color: '#EA4335' // Red
-                    }}>e</span>
-
-                    {/* Rating Text */}
-                    <span className="text-xs font-semibold text-gray-800 ml-1">Rating</span>
-                </div>
-
-                {/* 5 Stars */}
-                <div className="flex items-center">
-                    <span className="text-sm font-bold text-gray-900 mr-1">5.0</span>
-                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                    <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                </div>
+              <div className="flex items-center space-x-1 mb-0.5">
+                <span className="font-sans text-xs font-bold" style={{ color: "#4285F4" }}>
+                  G
+                </span>
+                <span className="font-sans text-xs font-bold" style={{ color: "#EA4335" }}>
+                  o
+                </span>
+                <span className="font-sans text-xs font-bold" style={{ color: "#FBBC05" }}>
+                  o
+                </span>
+                <span className="font-sans text-xs font-bold" style={{ color: "#4285F4" }}>
+                  g
+                </span>
+                <span className="font-sans text-xs font-bold" style={{ color: "#34A853" }}>
+                  l
+                </span>
+                <span className="font-sans text-xs font-bold" style={{ color: "#EA4335" }}>
+                  e
+                </span>
+                <span className="text-xs font-semibold text-gray-800 ml-1">Rating</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-sm font-bold text-gray-900 mr-1">5.0</span>
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                ))}
+              </div>
             </a>
-            {/* GOOGLE REVIEW BADGE End */}
 
-            <a href="tel:07845463877" className="flex items-center space-x-2 text-primary font-semibold hover:text-primary-light transition-colors">
+            <a
+              href="tel:07845463877"
+              className="flex items-center space-x-2 text-primary font-semibold hover:text-primary-light transition-colors"
+            >
               <Phone className="h-5 w-5" />
               <span>07845 463877</span>
             </a>
@@ -110,6 +107,7 @@ const Header = () => {
             </Button>
           </div>
 
+          {/* MENU BUTTON (MOBILE) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
@@ -119,9 +117,10 @@ const Header = () => {
           </button>
         </div>
 
+        {/* MOBILE MENU */}
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col space-y-2">
+            <nav className="flex flex-col space-y-3">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -136,6 +135,43 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
+
+              {/* MOBILE GOOGLE REVIEW BADGE */}
+              <a
+                href={googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center bg-white p-2 rounded-lg border border-gray-300 hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center mb-1">
+                  <span className="font-sans text-xs font-bold" style={{ color: "#4285F4" }}>
+                    G
+                  </span>
+                  <span className="font-sans text-xs font-bold" style={{ color: "#EA4335" }}>
+                    o
+                  </span>
+                  <span className="font-sans text-xs font-bold" style={{ color: "#FBBC05" }}>
+                    o
+                  </span>
+                  <span className="font-sans text-xs font-bold" style={{ color: "#4285F4" }}>
+                    g
+                  </span>
+                  <span className="font-sans text-xs font-bold" style={{ color: "#34A853" }}>
+                    l
+                  </span>
+                  <span className="font-sans text-xs font-bold" style={{ color: "#EA4335" }}>
+                    e
+                  </span>
+                  <span className="text-xs font-semibold text-gray-800 ml-1">Rating</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-sm font-bold text-gray-900 mr-1">5.0</span>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+                  ))}
+                </div>
+              </a>
+
               <a
                 href="tel:07845463877"
                 className="flex items-center justify-center space-x-2 px-4 py-3 text-primary font-semibold"
@@ -143,6 +179,7 @@ const Header = () => {
                 <Phone className="h-5 w-5" />
                 <span>07845 463877</span>
               </a>
+
               <Button asChild size="lg" className="w-full bg-gradient-primary">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   Get Free Quote
