@@ -93,7 +93,7 @@
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Pressure Washing & Exterior Cleaning Services",
+        "name": "Pressure Washing &amp; Exterior Cleaning Services",
         "itemListElement": [
           {
             "@type": "Offer",
