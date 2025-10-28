@@ -125,7 +125,7 @@ const About = () => {
                 </div>
                 <div className="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition duration-500">
                   <img 
-                    src="/public/before-after.webp" 
+                    src="/before-after.webp" 
                     alt="Before and after cleaning transformation" 
                     className="w-full h-96 object-cover"
                   />
@@ -286,7 +286,7 @@ const About = () => {
                     {/* Image/Visual */}
                     <div className="order-1 lg:order-2 relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-500">
                         <img 
-                            src="/public/eco.webp" 
+                            src="/eco.webp" 
                             alt="Eco-friendly cleaning practices" 
                             className="w-full h-96 object-cover"
                         />
@@ -433,7 +433,7 @@ const About = () => {
                 </div>
                 <div className="relative rounded-xl overflow-hidden shadow-2xl h-80">
                     <img 
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShdj2u2ZPpFqbW-hG37BOQdvL846SopTEcoQ&s" 
+                        src="https://picsum.photos/seed/newton-le-willows/600/400.jpg" 
                         alt="Newton-le-Willows map" 
                         className="w-full h-full object-cover"
                     />
