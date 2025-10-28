@@ -32,28 +32,216 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "RRM External Cleaning Specialist",
-      "image": "https://rrmexternalcleaningspecialist.co.uk/logo.jpg",
-      "description": "Professional external cleaning services across North West UK",
-      "telephone": "07845463877",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9 Noon Court",
-        "addressLocality": "Newton-le-Willows",
-        "addressCountry": "UK"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 53.4518,
-        "longitude": -2.6369
-      },
-      "url": "https://rrmexternalcleaningspecialist.co.uk",
-      "priceRange": "$$",
-      "areaServed": [
-        "Warrington", "Liverpool", "Manchester", "Wigan", "St Helens", "Widnes", "Leigh", "Lymm"
-      ],
-      "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-17:00"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://rrmexternalcleaningspecialist.co.uk/#website",
+          "url": "https://rrmexternalcleaningspecialist.co.uk/",
+          "name": "R.R.M External Cleaning Specialist",
+          "description": "R.R.M External Cleaning Specialist offers professional pressure washing, driveway cleaning, roof cleaning, patio cleaning, and exterior surface cleaning across Warrington, Liverpool, Manchester, Wigan, St Helens, and nearby areas.",
+          "publisher": {
+            "@id": "https://rrmexternalcleaningspecialist.co.uk/#localbusiness"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://rrmexternalcleaningspecialist.co.uk/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://rrmexternalcleaningspecialist.co.uk/#webpage",
+          "url": "https://rrmexternalcleaningspecialist.co.uk/",
+          "name": "R.R.M External Cleaning Specialist | Professional Pressure Washing & Exterior Cleaning",
+          "description": "Professional exterior cleaning and pressure washing specialists serving Warrington, Manchester, Liverpool, Wigan, St Helens, and surrounding areas. Driveway, patio, roof, and gutter cleaning experts — open 24/7.",
+          "inLanguage": "en-GB",
+          "isPartOf": { "@id": "https://rrmexternalcleaningspecialist.co.uk/#website" },
+          "about": { "@id": "https://rrmexternalcleaningspecialist.co.uk/#localbusiness" }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://rrmexternalcleaningspecialist.co.uk/#localbusiness",
+          "name": "R.R.M External Cleaning Specialist",
+          "image": "https://rrmexternalcleaningspecialist.co.uk/wp-content/uploads/2024/09/rrm-logo.png",
+          "url": "https://rrmexternalcleaningspecialist.co.uk/",
+          "telephone": "+44 7845 463877",
+          "priceRange": "££",
+          "description": "R.R.M External Cleaning Specialist provides expert pressure washing, driveway cleaning, patio cleaning, roof cleaning, gutter cleaning, fascia & soffit cleaning, and external restoration services. We proudly serve homes and businesses across Warrington, Liverpool, Manchester, Wigan, St Helens, and surrounding areas. Open 24/7.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9 Noon Ct",
+            "addressLocality": "Newton-le-Willows",
+            "addressRegion": "Merseyside",
+            "postalCode": "WA12 8QY",
+            "addressCountry": "GB"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.4516",
+            "longitude": "-2.6260"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "00:00",
+              "closes": "23:59"
+            }
+          ],
+          "areaServed": [
+            { "@type": "City", "name": "Lymm, UK" },
+            { "@type": "City", "name": "Leigh, UK" },
+            { "@type": "City", "name": "Wigan, UK" },
+            { "@type": "City", "name": "Widnes, UK" },
+            { "@type": "City", "name": "Prescot, UK" },
+            { "@type": "City", "name": "Ormskirk, UK" },
+            { "@type": "City", "name": "Rainhill, UK" },
+            { "@type": "City", "name": "Liverpool, UK" },
+            { "@type": "City", "name": "Burtonwood, UK" },
+            { "@type": "City", "name": "Huyton L36, UK" },
+            { "@type": "City", "name": "Manchester, UK" },
+            { "@type": "City", "name": "Warrington, UK" },
+            { "@type": "City", "name": "Skelmersdale, UK" },
+            { "@type": "City", "name": "Irlam, Manchester, UK" },
+            { "@type": "City", "name": "Lowton, Warrington, UK" },
+            { "@type": "City", "name": "Winwick, Warrington, UK" },
+            { "@type": "City", "name": "Golborne, Warrington, UK" },
+            { "@type": "City", "name": "St Helens, Saint Helens, UK" },
+            { "@type": "City", "name": "Birchwood, Warrington WA3, UK" },
+            { "@type": "City", "name": "Great Sankey, Warrington WA5, UK" }
+          ],
+          "sameAs": [
+            "https://share.google/Xuih53qQJywQluZQz",
+            "https://rrmexternalcleaningspecialist.co.uk/"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Pressure Washing & Exterior Cleaning Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pressure Washing",
+                  "description": "High-power jet washing for residential and commercial surfaces to remove dirt, moss, and stains safely."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Driveway Cleaning",
+                  "description": "Professional driveway cleaning for block paving, resin, concrete, and tarmac driveways."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Patio Cleaning",
+                  "description": "Deep cleaning of patios, paving, and decking using safe pressure washing methods."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Roof Cleaning",
+                  "description": "Roof moss removal and soft washing to enhance roof appearance and longevity."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gutter Cleaning",
+                  "description": "Gutter clearing, fascia, and soffit cleaning using safe access and vacuum systems."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fascia and Soffit Cleaning",
+                  "description": "Brightening and cleaning of fascia boards, soffits, and exterior uPVC."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Decking Cleaning",
+                  "description": "Pressure washing for timber and composite decking to remove algae and restore natural color."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Pressure Washing",
+                  "description": "Professional exterior cleaning for car parks, forecourts, offices, and commercial properties."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Graffiti Removal",
+                  "description": "Eco-friendly graffiti and paint removal for residential and commercial surfaces."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://rrmexternalcleaningspecialist.co.uk/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you provide pressure washing services in Warrington and nearby areas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, R.R.M External Cleaning Specialist serves Warrington, Liverpool, Manchester, Wigan, St Helens, and all surrounding towns — available 24/7."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are your cleaning methods safe for driveways and roofs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We use professional-grade equipment and eco-friendly detergents designed for safety and effectiveness on all surfaces."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer free quotes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we provide free, no-obligation quotes for all cleaning services. Contact us any time to schedule your estimate."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "AggregateRating",
+          "@id": "https://rrmexternalcleaningspecialist.co.uk/#rating",
+          "itemReviewed": {
+            "@id": "https://rrmexternalcleaningspecialist.co.uk/#localbusiness"
+          },
+          "ratingValue": "5",
+          "bestRating": "5",
+          "ratingCount": "120"
+        }
+      ]
     }
     </script>
   </head>
