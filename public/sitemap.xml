@@ -21,8 +21,8 @@
       "@type": "WebPage",
       "@id": "https://rrmexternalcleaningspecialist.co.uk/#webpage",
       "url": "https://rrmexternalcleaningspecialist.co.uk/",
-      "name": "R.R.M External Cleaning Specialist | Professional Pressure Washing  Exterior Cleaning",
-      "description": "Professional exterior cleaning and pressure washing specialists serving Warrington, Manchester, Liverpool, Wigan, St Helens, and surrounding areas. Driveway, patio, roof, and gutter cleaning experts — open 24/7.",
+      "name": "R.R.M External Cleaning Specialist | Professional Pressure Washing &amp; Exterior Cleaning",
+      "description": "Professional exterior cleaning and pressure washing specialists serving Warrington, Manchester, Liverpool, Wigan, St Helens, and surrounding areas. Driveway, patio, roof, and gutter cleaning experts \u2014 open 24/7.",
       "inLanguage": "en-GB",
       "isPartOf": { "@id": "https://rrmexternalcleaningspecialist.co.uk/#website" },
       "about": { "@id": "https://rrmexternalcleaningspecialist.co.uk/#localbusiness" }
@@ -35,7 +35,7 @@
       "url": "https://rrmexternalcleaningspecialist.co.uk/",
       "telephone": "+44 7845 463877",
       "priceRange": "££",
-      "description": "R.R.M External Cleaning Specialist provides expert pressure washing, driveway cleaning, patio cleaning, roof cleaning, gutter cleaning, fascia & soffit cleaning, and external restoration services. We proudly serve homes and businesses across Warrington, Liverpool, Manchester, Wigan, St Helens, and surrounding areas. Open 24/7.",
+      "description": "R.R.M External Cleaning Specialist provides expert pressure washing, driveway cleaning, patio cleaning, roof cleaning, gutter cleaning, fascia &amp; soffit cleaning, and external restoration services. We proudly serve homes and businesses across Warrington, Liverpool, Manchester, Wigan, St Helens, and surrounding areas. Open 24/7.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "9 Noon Ct",
@@ -93,7 +93,7 @@
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Pressure Washing & Exterior Cleaning Services",
+        "name": "Pressure Washing &amp; Exterior Cleaning Services",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -179,7 +179,7 @@
           "name": "Do you provide pressure washing services in Warrington and nearby areas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, R.R.M External Cleaning Specialist serves Warrington, Liverpool, Manchester, Wigan, St Helens, and all surrounding towns — available 24/7."
+            "text": "Yes, R.R.M External Cleaning Specialist serves Warrington, Liverpool, Manchester, Wigan, St Helens, and all surrounding towns \u2014 available 24/7."
           }
         },
         {
