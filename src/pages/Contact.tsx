@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+<link rel="canonical" href="https://www.cflmobilehomeservices.us/contact" />
 import RRMLogo from "@/components/ui/logo";
 
 const Contact = () => {
