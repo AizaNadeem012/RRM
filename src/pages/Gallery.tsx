@@ -3,6 +3,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { Card } from "@/components/ui/card";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+<link rel="canonical" href="https://www.rrmexternalcleaningspecialist.co.uk/gallery" />
 
 const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
