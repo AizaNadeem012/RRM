@@ -4,6 +4,8 @@ import { Phone, CheckCircle, Star, Award, Shield, Clock, Zap, Target, Heart, Thu
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+<link rel="canonical" href="https://www.rrmexternalcleaningspecialist.co.uk/services" />
+
 
 const Services = () => {
   const services = [
