@@ -56,7 +56,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-24 text-center">
         
         {/* H1 – Exact SEO Keyword */}
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold mb-6 leading-tight drop-shadow-lg">
           Expert Pressure Washing & Exterior Cleaning  
           <span className="block text-accent mt-2">
             in Newton-le-Willows & Across the North West UK
