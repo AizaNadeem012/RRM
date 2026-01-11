@@ -64,7 +64,7 @@ const Hero = () => {
         </h1>
 
         {/* H2 */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-white/95">
+        <h2 className="text-1xl md:text-2xl lg:text-2xl font-bold mb-8 text-white/95">
           Trusted Local Specialists with 9+ Years of Experience
         </h2>
 
