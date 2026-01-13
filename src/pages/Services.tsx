@@ -4,153 +4,128 @@ import { Phone, CheckCircle, Star, Award, Shield, Clock, Zap, Target, Heart, Thu
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-<link rel="canonical" href="https://www.rrmexternalcleaningspecialist.co.uk/services" />
 
 
 const Services = () => {
   const services = [
     {
-      title: "Commercial Cleaning",
-      image: "/commercial-cleaning.jpg",
-      description: "Professional commercial cleaning services for businesses and offices.",
-      details: [
-        "Office buildings and retail premises",
-        "Warehouses and industrial facilities",
-        "Shopping centers and public buildings",
-        "Flexible scheduling to minimize disruption",
-        "Health and safety compliant",
-      ],
-    },
-    {
-      title: "Window Cleaning",
-      image: "/window-cleaning.jpg",
-      description: "Crystal clear windows for residential and commercial properties.",
-      details: [
-        "Interior and exterior window cleaning",
-        "High-rise and ground-level access",
-        "Frame and sill cleaning",
-        "Streak-free finish guaranteed",
-        "Regular maintenance schedules available",
-      ],
-    },
-    {
-      title: "Pressure Washing Services",
+      title: "Pressure Washing",
       image: "/pressure-washing.jpg",
-      description: "High-pressure cleaning for all exterior hard surfaces.",
+      description: "Our pressure washing service removes dirt, grime, moss, algae, lichen, and stains from all outdoor surfaces.",
       details: [
-        "Driveways, patios, and pathways",
-        "Walls, fences, and outdoor furniture",
-        "Commercial and industrial cleaning",
-        "Graffiti and stain removal",
-        "Adjustable pressure for different surfaces",
+        "Driveways & Patios – restores original appearance and prevents moss buildup",
+        "Decking & Walkways – removes debris and improves safety",
+        "Walls & Fences – cleans pollution, dirt, and weathering",
+        "All hard surfaces thoroughly cleaned",
+        "Safe for all surface types",
       ],
     },
     {
-      title: "Roof Cleaning Services",
+      title: "Roof Cleaning",
       image: "/roof-cleaning.jpg",
-      description: "Safe and effective roof cleaning to remove moss and algae.",
+      description: "We remove moss, algae, lichen, and debris from roofs to improve appearance and extend roof life.",
       details: [
+        "Soft washing for tiles, slates, and shingles",
         "Remove moss, lichen, and algae safely",
+        "Prevents leaks and reduces water damage",
+        "Improves aesthetics and energy efficiency",
         "Extend the lifespan of your roof",
-        "Prevent water damage and leaks",
-        "Improve energy efficiency",
-        "Enhance property appearance",
       ],
     },
     {
-      title: "Gutter Cleaning & Repair",
+      title: "Gutter Cleaning",
       image: "/gutter-cleaning.jpg",
-      description: "Comprehensive gutter cleaning and maintenance services.",
+      description: "Our gutter cleaning service prevents blockages and water damage with full clearance and maintenance checks.",
       details: [
+        "Full gutter and downpipe clearance",
+        "Maintenance checks for proper water flow",
         "Remove leaves, debris, and blockages",
         "Prevent water overflow and damage",
-        "Check downpipes and drainage",
         "Identify potential issues early",
-        "Minor repairs and maintenance",
       ],
     },
     {
-      title: "Render Cleaning",
-      image: "/render-cleaning.jpg",
-      description: "Specialist cleaning for rendered walls and building exteriors.",
-      details: [
-        "Remove dirt, algae, and staining",
-        "Restore original appearance",
-        "Suitable for all render types",
-        "Prevent premature deterioration",
-        "Safe cleaning without damage",
-      ],
-    },
-    {
-      title: "Conservatory Cleaning",
-      image: "/conservatory-cleaning.jpg",
-      description: "Complete conservatory cleaning including roof, frames, and glass.",
-      details: [
-        "Clean glass roof panels inside and out",
-        "Remove algae and green growth",
-        "Clean frames, gutters, and finials",
-        "Restore clarity and brightness",
-        "Safe access using professional equipment",
-      ],
-    },
-    {
-      title: "Soffits & Facias Cleaning",
-      image: "/soffits-cleaning.jpg",
-      description: "Restore the shine to your soffits and fascias.",
-      details: [
-        "Remove dirt, grime, and oxidation",
-        "Restore original white or colored finish",
-        "Clean gutters and downpipes",
-        "Eco-friendly cleaning solutions",
-        "Long-lasting results",
-      ],
-    },
-    {
-      title: "Graffiti Removal",
-      image: "/graffiti-removal.jpg",
-      description: "Professional graffiti removal from all surfaces.",
-      details: [
-        "Remove graffiti from walls and surfaces",
-        "Safe chemical-free methods",
-        "Restore original appearance",
-        "Prevent future graffiti damage",
-        "Quick and effective service",
-      ],
-    },
-    {
-      title: "Driveway & Patio Restoration",
+      title: "Driveway & Patio Cleaning",
       image: "/driveway-restoration.jpg",
-      description: "Complete restoration of driveways and patios.",
+      description: "We restore driveways and patios using pressure washing or soft washing for all material types.",
       details: [
-        "Remove oil stains, moss, and algae",
+        "Materials: Concrete, paving stones, brick, natural stone",
+        "Removes algae, moss, oil stains, and grime",
         "Restore original color and appearance",
         "Prevent slippery surfaces",
         "Increase property value",
-        "Suitable for all surface types",
       ],
     },
     {
-      title: "Cladding Cleaning",
+      title: "Cladding & Render Cleaning",
       image: "/cladding-cleaning.jpg",
-      description: "Specialist cleaning for building cladding systems.",
+      description: "Clean and protect your property exterior walls, removing dirt, moss, algae, and pollution.",
       details: [
-        "Clean all types of cladding",
-        "Remove dirt, algae, and staining",
+        "Suitable for vinyl, composite, brick, and rendered walls",
+        "Removes dirt, moss, algae, and pollution",
         "Restore original appearance",
         "Safe cleaning methods",
         "Prevent premature deterioration",
       ],
     },
     {
-      title: "uPVC Cleaning",
-      image: "/upvc-cleaning.jpg",
-      description: "Restore the shine to your uPVC windows, doors, and frames.",
+      title: "Conservatory Cleaning",
+      image: "/conservatory-cleaning.jpg",
+      description: "Complete conservatory cleaning including roof, frames, and glass with removal of dirt, moss, and algae.",
       details: [
-        "Remove dirt, grime, and oxidation",
-        "Restore original white finish",
-        "Clean frames, sills, and doors",
+        "Roof panels and glass",
+        "Frames and guttering",
+        "Removal of dirt, moss, and algae",
+        "Brighter rooms and cleaner appearance",
+        "Mold prevention",
+      ],
+    },
+    {
+      title: "Commercial Exterior Cleaning",
+      image: "/commercial-cleaning.jpg",
+      description: "We serve shops, offices, warehouses, and industrial buildings with comprehensive exterior cleaning.",
+      details: [
+        "Pressure washing and roof cleaning",
+        "Gutter clearance and façade cleaning",
+        "Pavement & car park cleaning",
+        "Protects building surfaces",
+        "Improves professional appearance",
+      ],
+    },
+    {
+      title: "Moss Removal & High-Level Cleaning",
+      image: "/soffits-cleaning.jpg",
+      description: "Safe cleaning for roofs, chimneys, gutters, and façades using soft washing and eco-friendly detergents.",
+      details: [
+        "High-level access with professional equipment",
+        "Soft washing techniques",
         "Eco-friendly cleaning solutions",
-        "Long-lasting protection",
+        "Safe for all building heights",
+        "Comprehensive surface cleaning",
+      ],
+    },
+    {
+      title: "Soft Washing & Eco-Friendly Cleaning",
+      image: "/render-cleaning.jpg",
+      description: "For delicate surfaces, we use low-pressure soft washing with biodegradable detergents.",
+      details: [
+        "Surfaces: Roof tiles, slates, gutters, conservatories, cladding, render",
+        "Low-pressure cleaning methods",
+        "Safe, effective, eco-friendly",
+        "Biodegradable detergents",
+        "Protects delicate materials",
+      ],
+    },
+    {
+      title: "Surface Restoration",
+      image: "/upvc-cleaning.jpg",
+      description: "We restore hard surfaces including driveways, patios, decking, paving, stone, and concrete.",
+      details: [
+        "Removes stains, algae, moss, and weathering",
+        "Protective treatments for long-lasting results",
+        "Restore original appearance",
+        "All hard surface types covered",
+        "Increases property curb appeal",
       ],
     },
   ];
@@ -234,10 +209,10 @@ const Services = () => {
                 />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-                We take pride in what we do
+                Services – Expert Pressure Washing & Exterior Cleaning
               </h1>
               <p className="text-xl md:text-2xl mb-10 opacity-95 max-w-3xl mx-auto">
-                Professional external cleaning services for homes and businesses across Newton-le-Willows and the North West
+                At R.R.M External Cleaning Specialist, we provide professional pressure washing and exterior cleaning services for homes and businesses across Newton-le-Willows, St Helens, Warrington, Liverpool, Manchester, and the North West UK. With 9+ years of local experience, we deliver high-quality, reliable, and eco-friendly cleaning solutions.
               </p>
               <Button asChild size="lg" className="bg-accent text-primary hover:bg-accent/90 shadow-xl text-lg px-8 py-6 font-bold">
                 <Link to="/contact">Get Your Free Quote</Link>
@@ -487,6 +462,40 @@ const Services = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 7: Video Showcase */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+                See Our Work in Action
+              </h2>
+              <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                Watch how we transform properties across Newton-le-Willows and North West UK with our professional cleaning services
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden shadow-2xl border-0 bg-white">
+                <CardContent className="p-0">
+                  <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/8RPVyb1gN3c" 
+                      title="R.R.M External Cleaning Services" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
