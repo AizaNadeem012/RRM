@@ -6,8 +6,8 @@ import {
   CheckCircle, Star, Phone, MapPin, Clock, Award, Shield, Users, ThumbsUp, Zap, HelpCircle
 } from "lucide-react";
 
-const Services = () => {
-  const services = [
+const ServicesGrid = () => {
+  const servicesGrid = [
     {
       title: "Driveway & Patio Cleaning",
       description: "High-pressure cleaning for stone, concrete, block paving, and tarmac. Removes oil stains, dirt, moss, algae, and grime. Enhances outdoor aesthetics and property safety.",
@@ -333,4 +333,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesGrid;
