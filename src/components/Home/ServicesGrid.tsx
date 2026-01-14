@@ -122,6 +122,9 @@ const ServicesGrid = () => {
     "Golborne", "Skelmersdale", "Wigan", "Ormskirk", "Lymm", "Leigh", "Stockport"
   ];
 
+  // State to manage which video modal is open
+  const [openModal, setOpenModal] = React.useState<number | null>(null);
+
   return (
     <div className="bg-background">
       {/* Services Hero */}
@@ -151,7 +154,7 @@ const ServicesGrid = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => {
+            {servicesGrid.map((service, index) => {
               const Icon = service.icon;
               
               return (
@@ -167,10 +170,7 @@ const ServicesGrid = () => {
                         <Button 
                           variant="outline" 
                           className="bg-white/90 text-primary hover:bg-white"
-                          onClick={() => {
-                            const modal = document.getElementById(`video-modal-${index}`);
-                            if (modal) modal.classList.remove('hidden');
-                          }}
+                          onClick={() => setOpenModal(index)}
                         >
                           Watch Video
                         </Button>
@@ -201,42 +201,6 @@ const ServicesGrid = () => {
                       <Link to="/contact">Request Quote</Link>
                     </Button>
                   </CardContent>
-                  
-                  {/* Video Modal */}
-                  {service.video && (
-                    <div 
-                      id={`video-modal-${index}`}
-                      className="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4"
-                      onClick={() => {
-                        const modal = document.getElementById(`video-modal-${index}`);
-                        if (modal) modal.classList.add('hidden');
-                      }}
-                    >
-                      <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full">
-                        <div className="aspect-w-16 aspect-h-9">
-                          <iframe 
-                            src={service.video} 
-                            title={service.title}
-                            className="w-full h-[500px]"
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen
-                          ></iframe>
-                        </div>
-                        <div className="p-4 flex justify-end">
-                          <Button 
-                            variant="outline"
-                            onClick={() => {
-                              const modal = document.getElementById(`video-modal-${index}`);
-                              if (modal) modal.classList.add('hidden');
-                            }}
-                          >
-                            Close
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  )}
                 </Card>
               );
             })}
@@ -329,6 +293,38 @@ const ServicesGrid = () => {
           </Button>
         </div>
       </section>
+
+      {/* Video Modals */}
+      {servicesGrid.map((service, index) => (
+        service.video && (
+          <div 
+            key={`modal-${index}`}
+            className={`fixed inset-0 bg-black/80 z-50 ${openModal === index ? 'flex' : 'hidden'} items-center justify-center p-4`}
+            onClick={() => setOpenModal(null)}
+          >
+            <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full">
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe 
+                  src={service.video} 
+                  title={service.title}
+                  className="w-full h-[500px]"
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="p-4 flex justify-end">
+                <Button 
+                  variant="outline"
+                  onClick={() => setOpenModal(null)}
+                >
+                  Close
+                </Button>
+              </div>
+            </div>
+          </div>
+        )
+      ))}
     </div>
   );
 };
