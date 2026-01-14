@@ -1,75 +1,68 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Home, Droplets, Wind, Sun, Sparkles, Building, Trees, Zap, HelpCircle, 
-  CheckCircle, Phone, MapPin, Clock, Award, Shield, Leaf, Play, X
-} from "lucide-react";
+import { Link } from "react-router-dom"; // Agar router use nahi kar rahe to isko hata kar <a> use karein
 
 const ServicesGrid = () => {
   // --- DATA SECTION ---
-  
   const servicesGrid = [
     {
       title: "Driveway & Patio Cleaning",
       description: "High-pressure cleaning for stone, concrete, block paving, and tarmac. Removes oil stains, dirt, moss, algae, and grime.",
       features: ["High-pressure cleaning", "Stone, concrete, block paving, and tarmac", "Removes oil stains, dirt, moss, algae", "Enhances outdoor aesthetics and property safety"],
-      icon: Home,
+      icon: "🏠", // Emoji use kar rahe hain dependency se bachne ke liye
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1470&q=80",
       video: "https://www.youtube.com/embed/8RPVyb1gN3c"
     },
     {
       title: "Roof Cleaning",
-      description: "Soft washing for tiles, slates, and shingles. Removes moss, algae, lichen, and environmental grime. Prevents leaks and structural damage.",
+      description: "Soft washing for tiles, slates, and shingles. Removes moss, algae, lichen, and environmental grime.",
       features: ["Soft washing for tiles, slates, and shingles", "Removes moss, algae, lichen", "Prevents leaks and structural damage"],
-      icon: Droplets,
+      icon: "💧",
       image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1470&q=80",
       video: "https://www.youtube.com/embed/akFd4ZlcF4M"
     },
     {
       title: "Gutter Cleaning",
-      description: "Complete debris clearance and flushing. Prevents blockages, leaks, and water damage. Suitable for homes, offices, and commercial properties.",
+      description: "Complete debris clearance and flushing. Prevents blockages, leaks, and water damage.",
       features: ["Complete debris clearance and flushing", "Prevents blockages, leaks, and water damage", "Suitable for homes, offices, and commercial properties"],
-      icon: Wind,
+      icon: "🌬️",
       image: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=1470&q=80",
       video: "https://www.youtube.com/embed/MLyYIFVDhcU"
     },
     {
       title: "Cladding & Render Cleaning",
-      description: "Restores walls, façades, and exteriors. Removes dirt, mould, and pollution stains. Improves building aesthetics and longevity.",
+      description: "Restores walls, façades, and exteriors. Removes dirt, mould, and pollution stains.",
       features: ["Restores walls, façades, and exteriors", "Removes dirt, mould, and pollution stains", "Improves building aesthetics and longevity"],
-      icon: Sparkles,
+      icon: "✨",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1470&q=80",
       video: "https://www.youtube.com/embed/YGLP1Hm5MFE"
     },
     {
       title: "Conservatory & Glass Cleaning",
-      description: "Streak-free cleaning for glass, frames, and roofs. Removes algae, moss, and hard water stains. Protects surfaces while enhancing brightness.",
+      description: "Streak-free cleaning for glass, frames, and roofs. Removes algae, moss, and hard water stains.",
       features: ["Streak-free cleaning for glass, frames, and roofs", "Removes algae, moss, and hard water stains", "Protects surfaces while enhancing brightness"],
-      icon: Sun,
+      icon: "☀️",
       image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1470&q=80",
       video: "https://www.youtube.com/embed/KFw0dpj146w"
     },
     {
       title: "Commercial & Industrial Cleaning",
-      description: "Shopfronts, offices, car parks, and industrial units. Reduces grime, improves hygiene, and enhances presentation. Custom packages to suit business requirements.",
+      description: "Shopfronts, offices, car parks, and industrial units. Reduces grime, improves hygiene.",
       features: ["Shopfronts, offices, car parks, and industrial units", "Reduces grime, improves hygiene", "Custom packages to suit business requirements"],
-      icon: Building,
+      icon: "🏢",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1470&q=80"
     },
     {
       title: "Moss Removal & High-Level Cleaning",
-      description: "Safe cleaning for high roofs, walls, and gutters. Prevents slips, staining, and property damage. Soft washing preserves delicate surfaces.",
+      description: "Safe cleaning for high roofs, walls, and gutters. Prevents slips, staining, and property damage.",
       features: ["Safe cleaning for high roofs, walls, and gutters", "Prevents slips, staining, and property damage", "Soft washing preserves delicate surfaces"],
-      icon: Trees,
+      icon: "🌳",
       image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1470&q=80"
     },
     {
       title: "Power Washing & Soft Washing",
-      description: "High-pressure cleaning for stubborn dirt and stains. Soft washing with biodegradable detergents for sensitive areas. Restores and maintains surfaces effectively.",
+      description: "High-pressure cleaning for stubborn dirt and stains. Soft washing with biodegradable detergents.",
       features: ["High-pressure cleaning for stubborn dirt and stains", "Soft washing with biodegradable detergents", "Restores and maintains surfaces effectively"],
-      icon: Zap,
+      icon: "⚡",
       image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1470&q=80"
     }
   ];
@@ -84,10 +77,10 @@ const ServicesGrid = () => {
   ];
 
   const whyChooseUs = [
-    { icon: Award, title: "9+ Years Experience", desc: "Trusted local expertise in North West UK" },
-    { icon: Shield, title: "Fully Insured & Trained", desc: "Professional team with full safety training" },
-    { icon: Wind, title: "Comprehensive Services", desc: "From roof cleaning to moss removal" },
-    { icon: Sun, title: "Customer Focused", desc: "Reliable, punctual, and tailored service" }
+    { icon: "🏆", title: "9+ Years Experience", desc: "Trusted local expertise in North West UK" },
+    { icon: "🛡️", title: "Fully Insured & Trained", desc: "Professional team with full safety training" },
+    { icon: "🌬️", title: "Comprehensive Services", desc: "From roof cleaning to moss removal" },
+    { icon: "☀️", title: "Customer Focused", desc: "Reliable, punctual, and tailored service" }
   ];
 
   const ecoPractices = [
@@ -119,10 +112,10 @@ const ServicesGrid = () => {
   ];
 
   // --- STATE ---
-  const [openModal, setOpenModal] = useState<number | null>(null);
+  const [openModal, setOpenModal] = useState(null);
 
   return (
-    <div className="bg-background text-slate-900">
+    <div className="font-sans text-slate-900 antialiased">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-blue-600 to-blue-900 text-white text-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop')] bg-cover opacity-10"></div>
@@ -135,14 +128,10 @@ const ServicesGrid = () => {
             Every service is tailored for residential and commercial properties in the North West UK.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-yellow-400 text-blue-900 px-8 py-6 font-bold text-lg shadow-xl hover:scale-105 transition-transform">
-              <Link to="/contact">Get Free Quote</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white px-8 py-6 font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors">
-              <a href="tel:+447845463877" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" /> +44 7845 463877
-              </a>
-            </Button>
+            <a href="#contact" className="inline-block bg-yellow-400 text-blue-900 px-8 py-6 font-bold text-lg shadow-xl hover:scale-105 transition-transform rounded-lg">Get Free Quote</a>
+            <a href="tel:+447845463877" className="inline-block border-2 border-white text-white px-8 py-6 font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors rounded-lg flex items-center justify-center gap-2">
+              <span>📞</span> +44 7845 463877
+            </a>
           </div>
         </div>
       </section>
@@ -156,51 +145,46 @@ const ServicesGrid = () => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {servicesGrid.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border-none flex flex-col md:flex-row">
-                  <div className="relative w-full md:w-2/5 h-64 md:h-auto">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    {service.video && (
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onClick={() => setOpenModal(index)}>
-                        <div className="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                          <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1" />
-                        </div>
-                      </div>
-                    )}
+            {servicesGrid.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 flex flex-col md:flex-row overflow-hidden">
+                <div className="relative w-full md:w-2/5 h-64 md:h-auto">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {service.video && (
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer" onClick={() => setOpenModal(index)}>
+                      <div className="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center shadow-lg text-2xl">▶️</div>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="p-8 w-full md:w-3/5 flex flex-col">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 bg-blue-50 rounded-lg text-2xl">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-slate-800">{service.title}</h3>
                   </div>
                   
-                  <CardContent className="p-8 w-full md:w-3/5 flex flex-col">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-3 bg-blue-50 rounded-lg text-blue-600">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-slate-800">{service.title}</h3>
-                    </div>
-                    
-                    <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
-                    
-                    <ul className="space-y-2 mb-8">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
-                      <Link to="/contact">Request Quote</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                  <p className="text-slate-600 mb-6 flex-grow">{service.description}</p>
+                  
+                  <ul className="space-y-2 mb-8">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-sm text-slate-600">
+                        <span className="text-green-500">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a href="#contact" className="w-full block text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    Request Quote
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -229,33 +213,28 @@ const ServicesGrid = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
-            {/* Why Choose Us */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-slate-900">Why Choose R.R.M?</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {whyChooseUs.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={index} className="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-blue-300 transition-colors">
-                      <Icon className="h-8 w-8 text-blue-600 mb-4" />
-                      <h3 className="font-bold text-lg mb-2 text-slate-800">{item.title}</h3>
-                      <p className="text-sm text-slate-600">{item.desc}</p>
-                    </div>
-                  );
-                })}
+                {whyChooseUs.map((item, index) => (
+                  <div key={index} className="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-blue-300 transition-colors">
+                    <div className="text-4xl mb-4">{item.icon}</div>
+                    <h3 className="font-bold text-lg mb-2 text-slate-800">{item.title}</h3>
+                    <p className="text-sm text-slate-600">{item.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Eco-Friendly & Safety */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 md:p-12 border border-green-100 h-fit">
               <div className="flex items-center gap-3 mb-6">
-                <Leaf className="h-8 w-8 text-green-600" />
+                <div className="text-4xl">🌿</div>
                 <h2 className="text-3xl font-bold text-green-900">Eco-Friendly & Safety Practices</h2>
               </div>
               <ul className="space-y-4">
                 {ecoPractices.map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-green-800">
-                    <CheckCircle className="h-5 w-5 mt-1 flex-shrink-0 text-green-600" />
+                    <span className="text-green-600 mt-1">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -270,22 +249,16 @@ const ServicesGrid = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Pricing Guide</h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">Our pricing depends on property size, surface type, and service complexity. We provide transparent and fair pricing.</p>
+            <p className="text-slate-300 max-w-2xl mx-auto">Our pricing depends on property size, surface type, and service complexity.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {pricing.map((service, index) => (
-              <Card key={index} className="bg-white/5 backdrop-blur-sm border-white/10 text-white hover:bg-white/10 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl font-medium">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-yellow-400 mb-6">{service.price}</div>
-                  <Button asChild className="w-full bg-yellow-400 text-slate-900 hover:bg-yellow-300 font-bold">
-                    <Link to="/contact">Get Quote</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 transition-colors p-6 rounded-xl">
+                <h3 className="text-xl font-medium mb-4">{service.title}</h3>
+                <div className="text-3xl font-bold text-yellow-400 mb-6">{service.price}</div>
+                <a href="#contact" className="block w-full text-center bg-yellow-400 text-slate-900 hover:bg-yellow-300 font-bold py-2 rounded-lg">Get Quote</a>
+              </div>
             ))}
           </div>
         </div>
@@ -297,17 +270,15 @@ const ServicesGrid = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-3xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
-              <Card key={index} className="border-slate-100 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="flex gap-4">
-                    <HelpCircle className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-lg font-bold mb-2 text-slate-800">{faq.question}</h3>
-                      <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
-                    </div>
+              <div key={index} className="border border-slate-100 rounded-xl p-6 shadow-sm">
+                <div className="flex gap-4">
+                  <div className="text-2xl">❓</div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-2 text-slate-800">{faq.question}</h3>
+                    <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -323,7 +294,7 @@ const ServicesGrid = () => {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {serviceAreas.map((area, i) => (
                   <div key={i} className="flex items-center gap-2 text-slate-700 font-medium">
-                    <MapPin className="h-4 w-4 text-blue-600 flex-shrink-0"/> {area}
+                    <span className="text-blue-600">📍</span> {area}
                   </div>
                 ))}
               </div>
@@ -333,15 +304,15 @@ const ServicesGrid = () => {
                 <h3 className="font-bold text-lg mb-4">Contact Us</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <MapPin className="h-5 w-5 text-blue-600" />
+                    <span className="text-blue-600">📍</span>
                     <span className="text-slate-700">9 Noon Ct, Newton-le-Willows WA12 8QY, United Kingdom</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-blue-600" />
+                    <span className="text-blue-600">📞</span>
                     <a href="tel:+447845463877" className="text-slate-700 hover:text-blue-600 font-medium">+44 7845 463877</a>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-blue-600" />
+                    <span className="text-blue-600">🕒</span>
                     <span className="text-slate-700">Open 24 hours</span>
                   </div>
                 </div>
@@ -372,14 +343,10 @@ const ServicesGrid = () => {
             Let R.R.M External Cleaning Specialist provide professional, reliable, and eco-friendly pressure washing and exterior cleaning for your home or business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-yellow-400 text-slate-900 px-8 py-6 font-bold text-lg shadow-xl hover:scale-105 transition-transform">
-              <Link to="/contact">Get Free Quote</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white px-8 py-6 font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors">
-              <a href="tel:+447845463877" className="flex items-center gap-2">
-                <Phone className="h-5 w-5" /> +44 7845 463877
-              </a>
-            </Button>
+            <a href="#contact" className="bg-yellow-400 text-slate-900 px-8 py-6 font-bold text-lg shadow-xl hover:scale-105 transition-transform rounded-lg">Get Free Quote</a>
+            <a href="tel:+447845463877" className="border-2 border-white text-white px-8 py-6 font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors rounded-lg flex items-center justify-center gap-2">
+              <span>📞</span> +44 7845 463877
+            </a>
           </div>
         </div>
       </section>
@@ -397,7 +364,7 @@ const ServicesGrid = () => {
                 onClick={() => setOpenModal(null)}
                 className="absolute top-4 right-4 bg-black/50 hover:bg-black text-white rounded-full p-2 transition-colors z-10"
               >
-                <X className="h-5 w-5" />
+                ✕
               </button>
               <div className="aspect-video w-full">
                 <iframe 
